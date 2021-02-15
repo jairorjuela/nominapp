@@ -19,8 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
   - Use docker without 'sudo' command, you can follow the [instruccions](https://docs.docker.com/install/linux/linux-postinstall/)
 
   ### Build the app
-    - docker-compose run web rails new . --api --force --database=postgresql --T
-    - docker-compose build
+    - docker-compose build and in other terminal docker-compose run web rake db:create
 
   ### Running the app and tests
 
@@ -28,7 +27,7 @@ These instructions will get you a copy of the project up and running on your loc
 
   ## Built With
 
-    * [Rails](https://github.com/rails/rails) - Framework used
+  [Rails](https://github.com/rails/rails) - Framework used
 
   ## Contributing
 
