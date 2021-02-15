@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: database
+  username: postgres
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: nominapp_test_development
+
+test:
+  <<: *default
+  database: nominapp_test_test
