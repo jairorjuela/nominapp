@@ -11,5 +11,12 @@ class Container
       register("generate_array")  { RandomArrays::Create::GenerateArray.new }
       register("create_array")    { RandomArrays::Create::CreateArray.new }
     end
+
+    namespace "get" do
+      register("validate")         { RandomArrays::Get::Validate.new }
+      register("find_array")       { RandomArrays::Get::FindArray.new }
+      register("get_ranges")       { RandomArrays::Get::GetRanges.new }
+      register("build_response")   { RandomArrays::Get::BuildResponse.new }
+    end
   end
 end

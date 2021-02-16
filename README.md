@@ -18,8 +18,11 @@ These instructions will get you a copy of the project up and running on your loc
   - Docker Compose version 1.21.2 or higher
   - Use docker without 'sudo' command, you can follow the [instruccions](https://docs.docker.com/install/linux/linux-postinstall/)
 
-  ### Build the app
-    - docker-compose build and in other terminal docker-compose run web rake db:create
+  ### Build the app for first time
+    - docker-compose
+    - docker-compose up build and in other terminal docker-compose run web rake db:create
+    - docker-compose run web bash, and inside the rails terminar run rails db:migrate RAILS_ENV=development
+    - docker-compose run web rails db:seed
 
   ### Running the app and tests
 
