@@ -24,6 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
   ### Running the app and tests
 
     - docker-compose up
+    - docker-compose run web rspec spec
 
   ## Built With
 

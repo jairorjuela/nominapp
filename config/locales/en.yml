@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  errors:
+    valid_range?: "The input should be a number minimum of 10 max 30"
