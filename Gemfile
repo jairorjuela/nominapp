@@ -37,6 +37,10 @@ gem 'dry-monads'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  #Api documentation
+  gem 'rswag'
+  gem 'rswag-specs'
 end
 
 group :development do

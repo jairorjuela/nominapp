@@ -29,6 +29,11 @@ These instructions will get you a copy of the project up and running on your loc
     - docker-compose up
     - docker-compose run web rspec spec
 
+  ### API Documents
+
+    - docker-compose up
+    - go to http://localhost:3000/api-docs/index.html
+
   ## Built With
 
   [Rails](https://github.com/rails/rails) - Framework used

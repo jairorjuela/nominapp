@@ -1,0 +1,104 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/random_arrays":
+    post:
+      summary: Create a random array
+      tags:
+      - RandomArrays
+      parameters: []
+      responses:
+        '201':
+          description: The rate creation is ok
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - number_of_elements
+                - random_array
+                - random_array_id
+                properties:
+                  type: object
+                  properties:
+                    number_of_elements:
+                      type: integer
+                    random_array:
+                      type: array
+                    random_array_id:
+                      type: integer
+        '401':
+          description: The input is invalid
+          content:
+            application/json:
+              schema:
+                type: object
+                required: []
+                properties:
+                  number_of_elements:
+                    type: hash
+                  extra:
+                    type: hash
+                  code:
+                    type: hash
+                  error:
+                    type: hash
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                number_of_elements:
+                  type: integer
+              required:
+              - number_of_elements
+  "/api/v1/random_arrays/{id}":
+    get:
+      summary: Create a random array
+      tags:
+      - RandomArrays
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: The rate creation is ok
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - largest_range
+                properties:
+                  type: object
+                  properties:
+                    largest_range:
+                      type: object
+        '401':
+          description: The input is invalid
+          content:
+            application/json:
+              schema:
+                type: object
+                required: []
+                properties:
+                  largest_range:
+                    type: hash
+                  extra:
+                    type: hash
+                  code:
+                    type: hash
+                  error:
+                    type: hash
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
