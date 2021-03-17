@@ -20,7 +20,7 @@ class RandomArrays::Create::GenerateArray
 
     random_number = rand(30)
     array << random_number
-    array.uniq
+    array.!uniq
 
     generate_array(limit, array)
   end
